@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -560,9 +560,22 @@
         flex-shrink: 0;
       }
 
+      .sidebar-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 12px 24px;
+        background: rgba(14, 14, 18, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-light);
+      }
+
       .grid-container {
         height: auto;
         min-height: 50vh;
+        padding-bottom: 80px;
       }
 
       .grid {
@@ -1390,7 +1403,16 @@
 
 
       <div class="sidebar-footer">
-
+        <div class="status-card" style="margin-bottom: 0;">
+          <div class="section-label"
+            style="margin-bottom: 8px; font-size: 11px; text-transform: uppercase; color: var(--text-dim); letter-spacing: 1px;">
+            System Status</div>
+          <div class="status-text" id="status"
+            style="display: flex; align-items: center; color: var(--text-muted); font-size: 13px;"><span
+              class="status-indicator"
+              style="width: 8px; height: 8px; border-radius: 50%; background: #00E096; box-shadow: 0 0 10px rgba(0, 224, 150, 0.4); margin-right: 8px;"></span>Ready
+          </div>
+        </div>
       </div>
     </aside>
 
@@ -1420,17 +1442,6 @@
       </div>
 
       <div class="grid-container mainarea">
-        <div class="status-card"
-          style="margin-bottom: 20px; background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px;">
-          <div class="section-label"
-            style="margin-bottom: 8px; font-size: 11px; text-transform: uppercase; color: var(--text-dim); letter-spacing: 1px;">
-            System Status</div>
-          <div class="status-text" id="status"
-            style="display: flex; align-items: center; color: var(--text-muted); font-size: 13px;"><span
-              class="status-indicator"
-              style="width: 8px; height: 8px; border-radius: 50%; background: #00E096; box-shadow: 0 0 10px rgba(0, 224, 150, 0.4); margin-right: 8px;"></span>Ready
-          </div>
-        </div>
         <section class="grid" id="grid">
           <div class="cell" data-emote-id="909000001">
             <img src="https://raw.githubusercontent.com/jamiffsystem/FFAllIcon/main/emoteicon/909000001.png"
